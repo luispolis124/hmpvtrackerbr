@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const data = [
     { regiao: 'Brasil', totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
     { regiao: 'Estados Unidos', totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
+    { regiao: 'Canadá', totalCasos: 1000, casosAtivos: 200, casosRecuperados: 750, mortes: 50 },
     // Adicione mais dados conforme necessário
   ];
 
