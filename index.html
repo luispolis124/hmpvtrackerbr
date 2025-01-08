@@ -32,6 +32,10 @@
                 const data = await response.json();
                 const tableBody = document.getElementById('data-table');
 
+                if (!Array.isArray(data)) {
+                    throw new Error('Formato de dados inesperado');
+                }
+
                 data.forEach(item => {
                     const row = document.createElement('tr');
                     row.innerHTML = `
