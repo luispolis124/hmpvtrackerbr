@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const data = [
-    { regiao: 'Brasil', totalCasos: 1000, casosAtivos: 200, casosRecuperados: 750, mortes: 50 },
-    { regiao: 'Estados Unidos', totalCasos: 5000, casosAtivos: 1000, casosRecuperados: 3800, mortes: 200 },
+    { regiao: 'Brasil', totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
+    { regiao: 'Estados Unidos', totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
     // Adicione mais dados conforme necessário
   ];
 
