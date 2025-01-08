@@ -24,6 +24,31 @@
       </tbody>
     </table>
   </div>
-  <script src="script.js"></script>
+  <script>
+    const hmpvData = [
+      { regiao: "Brasil", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
+      { regiao: "Estados Unidos", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
+      { regiao: "Canadá", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
+      // Adicione mais dados conforme necessário
+    ];
+
+    function populateTable(data) {
+      const dataBody = document.getElementById("data-body");
+      data.forEach(item => {
+        const row = `
+          <tr>
+            <td>${item.regiao}</td>
+            <td>${item.totalCasos}</td>
+            <td>${item.casosAtivos}</td>
+            <td>${item.casosRecuperados}</td>
+            <td>${item.mortes}</td>
+          </tr>
+        `;
+        dataBody.innerHTML += row;
+      });
+    }
+
+    populateTable(hmpvData);
+  </script>
 </body>
 </html>
