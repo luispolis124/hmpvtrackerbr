@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crawler HMPV</title>
+    <title>Dados em Tempo Real dos Países</title>
 </head>
 <body>
-    <h1>Dados em Tempo Real do Vírus HMPV</h1>
+    <h1>Dados em Tempo Real dos Países</h1>
     <table>
         <thead>
             <tr>
+                <th>País</th>
+                <th>População</th>
+                <th>Área</th>
+                <th>Capital</th>
                 <th>Região</th>
-                <th>Total de Casos</th>
-                <th>Casos Ativos</th>
-                <th>Casos Recuperados</th>
-                <th>Mortes</th>
             </tr>
         </thead>
         <tbody id="data-table">
-            <!-- Os dados serão inseridos aqui pelo crawler -->
+            <!-- Os dados serão inseridos aqui -->
         </tbody>
     </table>
 
@@ -32,18 +32,14 @@
                 const data = await response.json();
                 const tableBody = document.getElementById('data-table');
 
-                if (!Array.isArray(data)) {
-                    throw new Error('Formato de dados inesperado');
-                }
-
                 data.forEach(item => {
                     const row = document.createElement('tr');
                     row.innerHTML = `
-                        <td>${item.regiao}</td>
-                        <td>${item.totalCasos}</td>
-                        <td>${item.casosAtivos}</td>
-                        <td>${item.casosRecuperados}</td>
-                        <td>${item.mortes}</td>
+                        <td>${item.name.common}</td>
+                        <td>${item.population}</td>
+                        <td>${item.area}</td>
+                        <td>${item.capital ? item.capital[0] : 'N/A'}</td>
+                        <td>${item.region}</td>
                     `;
                     tableBody.appendChild(row);
                 });
