@@ -1,5 +1,3 @@
-# Crawler de Vírus HMPV
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -26,21 +24,28 @@
 
     <script>
         async function fetchData() {
-            const response = await fetch('https://api.exemplo.com/hmpv');
-            const data = await response.json();
-            const tableBody = document.getElementById('data-table');
+            try {
+                const response = await fetch('https://api.exemplo.com/hmpv');
+                if (!response.ok) {
+                    throw new Error('Erro na requisição: ' + response.statusText);
+                }
+                const data = await response.json();
+                const tableBody = document.getElementById('data-table');
 
-            data.forEach(item => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${item.regiao}</td>
-                    <td>${item.totalCasos}</td>
-                    <td>${item.casosAtivos}</td>
-                    <td>${item.casosRecuperados}</td>
-                    <td>${item.mortes}</td>
-                `;
-                tableBody.appendChild(row);
-            });
+                data.forEach(item => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${item.regiao}</td>
+                        <td>${item.totalCasos}</td>
+                        <td>${item.casosAtivos}</td>
+                        <td>${item.casosRecuperados}</td>
+                        <td>${item.mortes}</td>
+                    `;
+                    tableBody.appendChild(row);
+                });
+            } catch (error) {
+                console.error('Erro ao buscar os dados:', error);
+            }
         }
 
         fetchData();
