@@ -20,153 +20,49 @@
         </tr>
       </thead>
       <tbody id="data-body">
-        <!-- Os dados serão inseridos aqui -->
-      </tbody>
+        </tbody>
     </table>
   </div>
   <script>
-    const hmpvData = [
-      { regiao: "Brasil", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Estados Unidos", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Canadá", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Alemanha", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "África", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Groelândia", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Portugal", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Afeganistão", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Japão", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Coreia Do Sul", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "China", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Rússia", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Ucrânia", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Índia", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Bahrein", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Uruguai", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Paraguai", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Cabo Verde", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Qatar", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Brunei", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Espanha", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "França", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Colombia", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Argentina", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Chile", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "México", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Reino Unido", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Itália", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Marrocos", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Egito", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Arábia Saudita", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Austrália", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Indonésia", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Bielorrússia", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Cuba", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Costa Rica", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Vaticano", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "El Salvador", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Eslováquia", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Eslovênia", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Finlândia", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Islândia", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Fuji", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Singapura", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Filipinas", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Vietnã", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Geórgia", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Grécia", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Holanda", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Honduras", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Gibraltar", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Guiné", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Jordânia", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Israel", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Irã", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Iraque", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Irlanda", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Irlanda do Norte", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Angola", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Andorra", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Albânia", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Peru", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Paquistão", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Azerbaijão", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Quirguistão", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Samoa", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Panamá", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "República do Congo", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Salomão", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Senegal", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Sérvia", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Romênia", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Somália", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Tailândia", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Suriname", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Guiana", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Guiana Francesa", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Taiwan", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Venezuela", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Turcomenistão", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Turquia", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Uzbequistão", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "República Tcheca", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Timor Leste", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Tuvalu", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Sudão do Sul", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Serra Leoa", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "São Cristóvão e Névis", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "República Turca de Chipre do Norte", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Quiribati", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Palau", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Omã", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Nova Zelândia", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Noruega", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Nigéria", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Moçambique", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Argélia", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Antígua e Barbuda", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Bangladesh", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Belize", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Botswana", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Butão", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Camarões", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Costa do Marfim", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Dominica", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Granada", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Guatemala", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Iêmen", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Kosovo", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Luxemburgo", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Liechtenstein", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Madagascar", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Montenegro", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Malawi", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Maldivas", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Países Baixos", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Sri Lanka", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "São Tomé e Príncipe", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "São Vicente e Granadinas", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Polônia", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      { regiao: "Senegal", totalCasos: 0, casosAtivos: 0, casosRecuperados: 0, mortes: 0 },
-      
-    ];
+    // Função para buscar e atualizar os dados da tabela
+    function fetchDataAndUpdateTable() {
+      // ***SUBSTITUA '/api/hmpv-data' PELA URL DA SUA API REAL***
+      fetch('/api/hmpv-data')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Erro na requisição: ' + response.status);
+          }
+          return response.json();
+        })
+        .then(data => {
+          const dataBody = document.getElementById("data-body");
+          dataBody.innerHTML = ''; // Limpa a tabela antes de adicionar os novos dados
 
-    function populateTable(data) {
-      const dataBody = document.getElementById("data-body");
-      data.forEach(item => {
-        const row = `
-          <tr>
-            <td>${item.regiao}</td>
-            <td>${item.totalCasos}</td>
-            <td>${item.casosAtivos}</td>
-            <td>${item.casosRecuperados}</td>
-            <td>${item.mortes}</td>
-          </tr>
-        `;
-        dataBody.innerHTML += row;
-      });
+          data.forEach(item => {
+            const row = `
+              <tr>
+                <td>${item.regiao}</td>
+                <td>${item.totalCasos}</td>
+                <td>${item.casosAtivos}</td>
+                <td>${item.casosRecuperados}</td>
+                <td>${item.mortes}</td>
+              </tr>
+            `;
+            dataBody.innerHTML += row;
+          });
+        })
+        .catch(error => {
+          console.error("Erro ao buscar dados:", error);
+          // Aqui você pode adicionar um tratamento de erro mais amigável ao usuário,
+          // como exibir uma mensagem na página.
+        });
     }
 
-    populateTable(hmpvData);
+    // Chama a função para buscar os dados inicialmente quando a página carrega
+    fetchDataAndUpdateTable();
+
+    // Define um intervalo para atualizar os dados periodicamente (a cada 1 minuto = 60000 milissegundos)
+    setInterval(fetchDataAndUpdateTable, 60000); // Ajuste o intervalo conforme necessário
   </script>
 </body>
 </html>
